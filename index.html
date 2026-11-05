@@ -9,5 +9,22 @@
 <body>
     <canvas id="myCanvas"></canvas>
     
+    <script>
+        navigator.mediaDevices.getUserMedia({video:true})
+            .then(function(rawData){
+                const video = document.createElement("video");
+                video.srcObject=rawData;
+                video.play();
+                video.onloadeddata = function(){
+                    const canvas = document.getElementById("myCanvas");
+                    canvas.width = video.videoWidth;
+                    canvas.height = video.videoHeight;
+
+                    const ctx = canvas.getContext("2d");
+                    ctx.drawImage(video,0,0,
+                        canvas.width, canvas.height);
+                }
+            }).catch(function(err){alert(err)})
+    </script>
 </body>
 </html>

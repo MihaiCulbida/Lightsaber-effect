@@ -21,10 +21,12 @@ class LightSaberEffect {
 
             const C = average(locs);
 
-            this.ctx.begitPath();
+            this.ctx.beginPath();
             this.ctx.fillStyle="red";
             this.ctx.arc(...C,10,0,Math.PI*2);
             this.ctx.fill();
+
+            let A = getFarthestForm(locs, C);
         }
 
         requestAnimationFrame(this.animate.bind(this));

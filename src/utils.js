@@ -31,7 +31,7 @@ function distance (p1,p2) {
     return Math.sqrt(dist);
 }
 
-function average(Locs){
+function average(locs){
     const center=[0,0];
     for(let i = 0;i<locs.length;i++){
         center[0]+=locs[i][0];
@@ -40,4 +40,18 @@ function average(Locs){
     center[0]/=locs.length;
     center[1]/=locs.length;
     return center;
+}
+
+function getFarhtestForm(locs, point) {
+    let maxDist = distance(point,locs[0]);
+    let farthest=locs[0];
+
+    for(let i = 1; i < locs.length;i++) {
+        let d = distance(locs[i], point);
+        if(d>maxDist){
+            maxDist = d;
+            farthest=locs[i];
+        }
+    }
+    return farthest;
 }

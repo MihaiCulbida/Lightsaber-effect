@@ -20,11 +20,11 @@
                     canvas.width = video.videoWidth;
                     canvas.height = video.videoHeight;
 
-                    const ctx = canvas.getContext("2d");
-                    ctx.drawImage(video,0,0,
-                        canvas.width, canvas.height);
+                    const lse = new LightSaberEffect(canvas, video);
                 }
             }).catch(function(err){alert(err)})
     </script>
+    <script src="src/light-saber.js"></script>
+    <script src="src/utils.js"></script>
 </body>
 </html>

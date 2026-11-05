@@ -30,3 +30,14 @@ function distance (p1,p2) {
     }
     return Math.sqrt(dist);
 }
+
+function average(Locs){
+    const center=[0,0];
+    for(let i = 0;i<locs.length;i++){
+        center[0]+=locs[i][0];
+        center[1]+=locs[i][1];
+    }
+    center[0]/=locs.length;
+    center[1]/=locs.length;
+    return center;
+}

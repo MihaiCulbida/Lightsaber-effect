@@ -72,7 +72,7 @@ class LightSaberEffect{
             this.ctx.shadowBlur=30;
             this.ctx.lineWidth=20;
 
-            const length=10;
+            const length=25;
             const tip=[
                 A[0]+(B[0]-A[0])*length,
                 A[1]+(B[1]-A[1])*length

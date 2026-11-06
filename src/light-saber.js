@@ -37,7 +37,12 @@ class LightSaberEffect {
             this.ctx.beginPath();
             this.ctx.strokeStyle="white";
             this.ctx.moveTo(...B);
-            this.ctx.lineTo(...A);
+            const length = 2;
+            const tip = [
+                A[0]+(B[0]-A[0])*length, 
+                A[1]+(B[1]-A[1])*length
+            ];
+            this.ctx.lineTo(...tip);
             this.ctx.stroke();
         }
 

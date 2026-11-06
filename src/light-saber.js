@@ -66,13 +66,13 @@ class LightSaberEffect{
             this.ctx.fill();
             */
             this.ctx.beginPath();
-            this.ctx.strokeStyle="white";
-            this.ctx.shadowColor='white';
+            this.ctx.strokeStyle="white"; //color
+            this.ctx.shadowColor='white'; //color
             this.ctx.lineCap='round';
             this.ctx.shadowBlur=30;
-            this.ctx.lineWidth=20;
+            this.ctx.lineWidth=20; 
 
-            const length=15;
+            const length=7;
             const tip=[
                 A[0]+(B[0]-A[0])*length,
                 A[1]+(B[1]-A[1])*length
@@ -101,7 +101,7 @@ class AudioEffect{
         this.oscillator = this.audioContext.createOscillator();
 
         this.oscillator.type = 'sine';
-        this.oscillator.frequency.setValueAtTime(100, this.audioContext.currentTime); // value in hertz
+        this.oscillator.frequency.setValueAtTime(100, this.audioContext.currentTime);
         this.oscillator.start();
 
         this.gainNode = this.audioContext.createGain();

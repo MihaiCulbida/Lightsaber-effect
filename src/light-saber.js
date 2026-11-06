@@ -49,7 +49,7 @@ class LightSaberEffect{
             
             A=average(setA)
             B=average(setB)
-            /*
+            
             this.ctx.beginPath();
             this.ctx.fillStyle="red";
             this.ctx.arc(...C,10,0,Math.PI*2);
@@ -64,13 +64,13 @@ class LightSaberEffect{
             this.ctx.beginPath();
             this.ctx.arc(...B,10,0,Math.PI*2);
             this.ctx.fill();
-            */
+            
             this.ctx.beginPath();
             this.ctx.strokeStyle="white";
             this.ctx.shadowColor='white';
             this.ctx.lineCap='round';
-            this.ctx.shadowBlur=30;
-            this.ctx.lineWidth=25;
+            this.ctx.shadowBlur=distance(A,B)*30;
+            this.ctx.lineWidth=distance(A,B)*25;
 
             const length=10;
             const tip=[

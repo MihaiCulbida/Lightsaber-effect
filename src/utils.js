@@ -1,4 +1,4 @@
-function getMarkedLocations(ctx, color = [10,100,210], threshold=60) {
+function getMarkedLocations(ctx, color = [51, 78, 164], threshold=60) {
     const locs = [];
     const imgData = ctx.getImageData(0,0,
         ctx.canvas.width, ctx.canvas.height);

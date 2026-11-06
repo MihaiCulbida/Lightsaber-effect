@@ -69,8 +69,8 @@ class LightSaberEffect{
             this.ctx.strokeStyle="white";
             this.ctx.shadowColor='white';
             this.ctx.lineCap='round';
-            this.ctx.shadowBlur=distance(A,B)*30;
-            this.ctx.lineWidth=distance(A,B)*25;
+            this.ctx.shadowBlur=30;
+            this.ctx.lineWidth=20;
 
             const length=10;
             const tip=[

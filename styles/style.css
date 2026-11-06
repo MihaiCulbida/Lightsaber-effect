@@ -11,3 +11,7 @@ canvas {
     transform: translate(-50%, -50%);
     width: 98%;
 }
+
+#myCanvas {
+    transform: scaleX(-1);
+}

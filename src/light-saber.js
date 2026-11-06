@@ -49,18 +49,7 @@ class LightSaberEffect{
             
             A=average(setA)
             B=average(setB)
-
-            if(this.lastA!=null){
-                const same = distance(A,this.lastA) + distance(B,this.lastB);
-                const swapped = distance(A,this.lastB) + distance(B,this.lastA);
-                if(swapped < same){
-                    [A, B] = [B, A];
-                }
-            }
-            if(this.lastA!=null){
-                A = [this.lastA[0]*0.6 + A[0]*0.4, this.lastA[1]*0.6 + A[1]*0.4];
-                B = [this.lastB[0]*0.6 + B[0]*0.4, this.lastB[1]*0.6 + B[1]*0.4];
-            }
+            /*
             this.ctx.beginPath();
             this.ctx.fillStyle="red";
             this.ctx.arc(...C,10,0,Math.PI*2);
@@ -75,7 +64,7 @@ class LightSaberEffect{
             this.ctx.beginPath();
             this.ctx.arc(...B,10,0,Math.PI*2);
             this.ctx.fill();
-            
+            */
             this.ctx.beginPath();
             this.ctx.strokeStyle="white";
             this.ctx.shadowColor='white';
@@ -83,7 +72,7 @@ class LightSaberEffect{
             this.ctx.shadowBlur=30;
             this.ctx.lineWidth=20;
 
-            const length=25;
+            const length=15;
             const tip=[
                 A[0]+(B[0]-A[0])*length,
                 A[1]+(B[1]-A[1])*length

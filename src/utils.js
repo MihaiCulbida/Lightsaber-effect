@@ -5,11 +5,11 @@ function getMarkedLocations(ctx, color = [10,100,210], threshold=60) {
     const data=imgData.data;
     
     for(let i = 0; i<data.length;i+=4) {
-        const r = data[1];
+        const r = data[i];
         const g = data[i+1];
         const b = data[i+2];
 
-        if(colorMatch([r,g,b],color,treshold)) {
+        if(colorMatch([r,g,b],color,threshold)) {
             const pIndex=i/4;
             const y = Math.floor(pIndex / ctx.canvas.width);
             const x = pIndex % ctx.canvas.width;
@@ -42,7 +42,7 @@ function average(locs){
     return center;
 }
 
-function getFarhtestForm(locs, point) {
+function getFarthestFrom(locs, point) {
     let maxDist = distance(point,locs[0]);
     let farthest=locs[0];
 

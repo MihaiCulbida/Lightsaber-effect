@@ -6,7 +6,7 @@ class LightSaberEffect{
         this.lastA=null;
         this.lastB=null;
         this.color=[51,78,164];
-        this.bladeColor="#1e90ff";
+        this.bladeColor="#ff1a1a";
         this.ctx=canvas.getContext("2d",{willReadFrequently:true});
         this.audioEffect=new AudioEffect();
 

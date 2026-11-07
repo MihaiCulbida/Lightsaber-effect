@@ -66,8 +66,8 @@ class LightSaberEffect{
             this.ctx.fill();
             */
             this.ctx.beginPath();
-            this.ctx.strokeStyle="white"; //color
-            this.ctx.shadowColor='white'; //color
+            this.ctx.strokeStyle = "#1e90ff"; //color
+            this.ctx.shadowColor = "#1e90ff"; //color
             this.ctx.lineCap='round';
             this.ctx.shadowBlur=30;
             this.ctx.lineWidth=20; 

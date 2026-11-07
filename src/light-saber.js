@@ -82,30 +82,20 @@ class LightSaberEffect{
             this.ctx.save();
             this.ctx.lineCap='round';
 
-            this.ctx.beginPath();
-            this.ctx.shadowColor=this.bladeColor;
-            this.ctx.shadowBlur=50;
-            this.ctx.strokeStyle=this.bladeColor;
-            this.ctx.lineWidth=28;
-            this.ctx.moveTo(...B);
-            this.ctx.lineTo(...tip);
-            this.ctx.stroke();
-
-            this.ctx.beginPath();
-            this.ctx.shadowBlur=25;
-            this.ctx.lineWidth=16;
-            this.ctx.moveTo(...B);
-            this.ctx.lineTo(...tip);
-            this.ctx.stroke();
-
-            this.ctx.beginPath();
-            this.ctx.shadowColor='white';
-            this.ctx.shadowBlur=10;
-            this.ctx.strokeStyle='white';
-            this.ctx.lineWidth=7;
-            this.ctx.moveTo(...B);
-            this.ctx.lineTo(...tip);
-            this.ctx.stroke();
+            const layers=6;
+            for(let i=0;i<layers;i++){
+                const t=i/(layers-1);
+                const col=mixWhite(this.bladeColor,t);
+                this.ctx.beginPath();
+                this.ctx.globalAlpha=i===layers-1?1:0.55;
+                this.ctx.shadowColor=col;
+                this.ctx.shadowBlur=50-t*40;
+                this.ctx.strokeStyle=col;
+                this.ctx.lineWidth=30-t*21;
+                this.ctx.moveTo(...B);
+                this.ctx.lineTo(...tip);
+                this.ctx.stroke();
+            }
 
             this.ctx.restore();
         }

@@ -18,3 +18,5 @@ Press these keys on your keyboard to change the blade color:
 ## Tips
 
 Use good lighting and a background that doesn't match the marker's color. Sound starts after the first click or key press.
+
+Live at [mihaiculbida.github.io/Lightsaber-effect](https://mihaiculbida.github.io/Lightsaber-effect)

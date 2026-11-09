@@ -6,3 +6,11 @@ Lightsaber Effect turns a blue marker into a glowing blade. It uses your webcam 
 1. Allow camera access when the browser asks.
 2. Hold a blue marker in front of the camera.
 3. Move the marker and the blade follows.
+
+## Controls
+
+Press these keys on your keyboard to change the blade color:
+
+- `1` blue blade
+- `2` red blade
+- `3` white blade
